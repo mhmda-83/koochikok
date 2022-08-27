@@ -1,0 +1,24 @@
+{
+  "app_name": "Koochikok",
+  "description": "Node.js url shortener",
+  "hidden": false,
+  "rank": 21,
+  "type": "Full App",
+  "contributed_by": "Community",
+  "repo_url": "https://github.com/mhmda-83/koochikok",
+  "download_url": "https://github.com/mhmda-83/koochikok/archive/main.zip",
+  "hosted_url": "",
+  "quick_deploy": "false",
+  "deploy_buttons": [],
+  "language": ["JavaScript"],
+  "redis_commands": ["FT.SEARCH", "JSON.SET", "JSON.NUMINCRBY"],
+  "redis_features": ["caching"],
+  "redis_modules": ["RedisJSON", "RedisSearch"],
+  "app_image_urls": [
+    "https://github.com/mhmda-83/koochikok/blob/main/architecture.jpg?raw=true"
+  ],
+  "youtube_url": "",
+  "special_tags": ["Hackathon"],
+  "verticals": ["Technology", "Education"],
+  "markdown": "https://raw.githubusercontent.com/mhmda-83/koochikok/main/README.md"
+}

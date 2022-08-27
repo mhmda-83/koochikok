@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "f69fabca-0f46-4b2a-a798-ea8bff690348",
+		"name": "Koochikok (Redis)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7507700"
+	},
+	"item": [
+		{
+			"name": "URL",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"original_url\": \"{{$randomUrl}}/{{$randomCity}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/url",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "redirect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/GX2csv",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"GX2csv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

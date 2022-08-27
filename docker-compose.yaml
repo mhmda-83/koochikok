@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: koochikok_api
+    restart: always
+    depends_on:
+      - redis
+      - mongodb
+    env_file:
+      - .env.docker
+    environment:
+      - REDIS_URI=redis://redis:6379
+      - MONGODB_URI=mongodb://mongodb:27017/koochikok
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=password
+      - HOST=0.0.0.0
+    ports:
+      - 7500:7500
+    networks:
+      - koochikok
+  redis:
+    image: redis/redis-stack:7.0.2-RC1
+    container_name: koochikok_redis
+    restart: always
+    ports:
+      - 8001:8001
+    networks:
+      - koochikok
+  mongodb:
+    image: mongo:6-focal
+    container_name: koochikok_mongodb
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    networks:
+      - koochikok
+networks:
+  koochikok:
+    name: koochikok_network
