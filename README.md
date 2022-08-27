@@ -1,6 +1,6 @@
 # Koochikok
 
-A url shortener which uses Redis as it's primary database
+A URL shortener that uses Redis as its primary database and MongoDB as a secondary database
 
 ![architecture](https://raw.githubusercontent.com/mhmda-83/koochikok/main/architecture.jpg)
 
