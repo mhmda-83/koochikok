@@ -2,7 +2,7 @@
 
 A url shortener which uses Redis as it's primary database
 
-![architecture](architecture.jpg)
+![architecture](https://raw.githubusercontent.com/mhmda-83/koochikok/main/architecture.jpg)
 
 ## How it works
 
